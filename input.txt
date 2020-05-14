@@ -1,0 +1,55 @@
+a, b, c, d;
+{
+ input a;
+ b = 0;
+ c = 0;
+ SWITCH a {
+  CASE 1:
+  {
+   c = 1;
+   SWITCH c  
+   {
+    CASE 1:
+    {
+     b = 888;
+    }
+    CASE 2:
+    {
+     c = 100;
+    }
+   }
+  }
+  CASE 2:
+  {
+   b = 900;
+   IF b > a {
+    c = c + 2;
+    output c;
+   }
+   
+   IF c <> 1 {
+    c = 100;
+    output c;
+   
+    WHILE c > 90 {
+     FOR(d = 0; d < 5; d = d + 1;){
+      b = b - 10;
+     }
+     
+     c = c - 1;
+    }
+   }
+   }
+  CASE 3:
+  {
+   b = 800;
+   }
+  DEFAULT:
+  {
+   b = 999;
+   }
+ 
+ }
+ output b;
+}
+1 2 3 4 5
